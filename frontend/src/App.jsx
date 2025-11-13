@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LoginPage from "./routes/LoginPage";
+import HomePage from "./routes/Home";
 
 
 function App() {
