@@ -9,19 +9,27 @@ export default function Nav({
   children,
 }) {
   const location = useLocation();
-
   const current = location.pathname.replace("/", "");
 
   const menuItems = [
     { name: "Home", icon: <Home size={18} />, route: "home" },
     { name: "Trilhas", icon: <Layers size={18} />, route: "trilhas" },
     { name: "Bem-estar", icon: <Smile size={18} />, route: "bem-estar" },
-    { name: "Perfil", icon: <User size={18} />, route: "perfil" },
+
+    // PERFIL COM EMAIL TRUNCADO + ÍCONE FIXO
+    {
+      name: (
+        <span className="truncate overflow-hidden text-ellipsis whitespace-nowrap max-w-[120px]">
+          {username}
+        </span>
+      ),
+      icon: <User size={18} className="flex-shrink-0" />,
+      route: "perfil",
+    },
   ];
 
   return (
     <div className="flex h-screen">
-      {/* MENU LATERAL */}
       <aside className="w-56 bg-blue-900 flex flex-col justify-between text-white">
         <div>
           <div className="flex items-center justify-center p-4 border-b border-blue-700">
@@ -33,9 +41,9 @@ export default function Nav({
           </div>
 
           <nav className="mt-4 space-y-1">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
-                key={item.name}
+                key={index}
                 onClick={() => onNavigate(item.route)}
                 className={`flex items-center gap-3 w-full px-5 py-2 text-sm font-medium transition-all ${
                   current === item.route
@@ -58,11 +66,19 @@ export default function Nav({
         </button>
       </aside>
 
-      {/* CONTEÚDO PRINCIPAL */}
       <div className="flex-1 flex flex-col">
         <header className="bg-blue-900 text-white py-3 px-6 flex justify-between items-center">
+
           <h1 className="text-lg font-semibold">{title}</h1>
-          <span>{username}</span>
+
+          {/* EMAIL NO HEADER COM TRUNCATE */}
+          <div className="flex items-center gap-2 max-w-[180px]">
+            <User size={20} className="flex-shrink-0" />
+
+            <span className="truncate overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+              {username}
+            </span>
+          </div>
         </header>
 
         <main className="flex-1 bg-gray-50 p-10 flex flex-col items-center">

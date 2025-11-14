@@ -1,6 +1,6 @@
-import NavLayout from "../components/Nav"
+import NavLayout from "../components/Nav";
 
-export default function HomePage({ trilhas, onNavigate, onLogout }) {
+export default function HomePage({ trilhas, onNavigate, onLogout, username }) {
   const mediaProgresso =
     trilhas.length > 0
       ? trilhas.reduce((acc, t) => acc + t.progresso, 0) / trilhas.length
@@ -9,15 +9,16 @@ export default function HomePage({ trilhas, onNavigate, onLogout }) {
   return (
     <NavLayout
       title="FUTURION HUB"
-      username="Bem-vindo, Aprendiz!"
+      username={username} // ← AGORA MOSTRA O E-MAIL DO USUÁRIO
       active="Home"
       onNavigate={onNavigate}
       onLogout={onLogout}
     >
       <div className="bg-white rounded-2xl shadow-md w-full max-w-2xl p-8 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Bem-vindo, Aprendiz!
+          Bem-vindo, {username}!
         </h2>
+
         <p className="text-gray-600 mb-6">
           Aqui você encontrará trilhas de aprendizado personalizadas e recursos
           para seu desenvolvimento profissional.

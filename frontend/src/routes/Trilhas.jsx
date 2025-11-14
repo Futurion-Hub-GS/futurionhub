@@ -1,7 +1,7 @@
 import { useState } from "react";
 import NavLayout from "../components/Nav";
 
-export default function TrilhasPage({ trilhas, setTrilhas, onNavigate, onLogout }) {
+export default function TrilhasPage({ trilhas, setTrilhas, onNavigate, onLogout, username }) {
   const iniciarTrilha = (index) => {
     const novas = [...trilhas];
     novas[index].progresso = 10;
@@ -18,12 +18,12 @@ export default function TrilhasPage({ trilhas, setTrilhas, onNavigate, onLogout 
   return (
     <NavLayout
       title="Trilhas Personalizadas"
+      username={username} // ← AGORA TAMBÉM MOSTRA O E-MAIL DO USUÁRIO AQUI
       active="Trilhas"
       onNavigate={onNavigate}
       onLogout={onLogout}
     >
       <div className="flex-1 w-full max-w-3xl space-y-6">
-
         {trilhas.map((trilha, index) => (
           <div key={index} className="bg-white shadow-sm rounded-xl p-6">
             <div className="flex justify-between text-sm font-medium text-gray-700">
@@ -61,7 +61,6 @@ export default function TrilhasPage({ trilhas, setTrilhas, onNavigate, onLogout 
             </div>
           </div>
         ))}
-
       </div>
     </NavLayout>
   );
@@ -92,7 +91,10 @@ function AtualizarProgresso({ trilha, onUpdate }) {
       </button>
     </div>
   ) : (
-    <button onClick={() => setEditando(true)} className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
+    <button
+      onClick={() => setEditando(true)}
+      className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm"
+    >
       Atualizar
     </button>
   );
