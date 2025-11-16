@@ -1,10 +1,1144 @@
 {
-  "id": 1,
-  "nome": "Ana Silva",
-  "cargo": "Engenheira Full Stack",
-  "cidade": "São Paulo",
-  "estado": "SP",
-  "area": "Engenharia",
-  "tecnologia": "Full Stack",
-  "foto": "/imgs/ana.jpg"
+  "profissionais": [
+    {
+      "id": 1,
+      "name": "Ana Silva",
+      "title": "Engenheira Full Stack",
+      "location": "São Paulo, SP",
+      "area": "Tecnologia",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["React", "Node.js", "PostgreSQL"],
+      "bio": "Desenvolvedora apaixonada por criar experiências web incríveis com 8 anos de experiência.",
+      "education": [{ "degree": "Bacharel em Ciência da Computação", "institution": "USP", "year": 2017 }],
+      "experience": [
+        { "role": "Senior Developer", "company": "TechCorp", "years": "2021-Presente" },
+        { "role": "Full Stack Developer", "company": "StartupXYZ", "years": "2018-2021" }
+      ],
+      "technicalSkills": ["React", "Node.js", "PostgreSQL", "Docker", "AWS", "GraphQL"],
+      "softSkills": ["Liderança", "Comunicação", "Resolução de Problemas"],
+      "hobbies": "Contribui em projetos open-source, fotografa paisagens urbanas",
+      "email": "ana.silva@email.com"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Mendes",
+      "title": "Designer UX/UI",
+      "location": "Rio de Janeiro, RJ",
+      "area": "Design",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Figma", "Design Thinking", "Prototipagem"],
+      "bio": "Designer experiente em criar interfaces intuitivas e acessíveis com foco em usabilidade.",
+      "education": [{ "degree": "Design Gráfico", "institution": "UERJ", "year": 2016 }],
+      "experience": [
+        { "role": "Lead Designer", "company": "DesignStudio", "years": "2020-Presente" },
+        { "role": "UX Designer", "company": "DigitalAgency", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Figma", "Adobe Creative Suite", "Protopie", "Webflow"],
+      "softSkills": ["Criatividade", "Empatia", "Pensamento Estratégico"],
+      "hobbies": "Viaja para estudar arquitetura, ilustra digitalmente",
+      "email": "carlos.mendes@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Juliana Costa",
+      "title": "Desenvolvedora Backend",
+      "location": "Belo Horizonte, MG",
+      "area": "Tecnologia",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Python", "Java", "Microserviços"],
+      "bio": "Especialista em arquitetura de sistemas escaláveis e otimização de performance.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFMG", "year": 2018 }],
+      "experience": [
+        { "role": "Arquiteto de Software", "company": "CloudServices", "years": "2021-Presente" },
+        { "role": "Backend Developer", "company": "FinTechCo", "years": "2019-2021" }
+      ],
+      "technicalSkills": ["Python", "Java", "Kubernetes", "RabbitMQ", "MongoDB", "Redis"],
+      "softSkills": ["Pensamento Crítico", "Colaboração", "Mentoria"],
+      "hobbies": "Escreve sobre arquitetura de software, pratica culinária",
+      "email": "juliana.costa@email.com"
+    },
+    {
+      "id": 4,
+      "name": "Marcus Robinson",
+      "title": "Product Manager",
+      "location": "São Paulo, SP",
+      "area": "Gestão",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Product Strategy", "Analytics", "Stakeholder Management"],
+      "bio": "PM com 10 anos de experiência em produtos B2B e B2C de alto impacto.",
+      "education": [{ "degree": "MBA em Gestão de Produtos", "institution": "FGV", "year": 2016 }],
+      "experience": [
+        { "role": "Senior Product Manager", "company": "TechGiant", "years": "2020-Presente" },
+        { "role": "Product Manager", "company": "SaaS Startup", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Jira", "Google Analytics", "SQL", "Mixpanel", "Amplitude"],
+      "softSkills": ["Visão Estratégica", "Negociação", "Comunicação Executiva"],
+      "hobbies": "Investe em startups, organiza meetups de product managers",
+      "email": "marcus.robinson@email.com"
+    },
+    {
+      "id": 5,
+      "name": "Beatriz Santos",
+      "title": "Data Scientist",
+      "location": "Curitiba, PR",
+      "area": "Dados",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Machine Learning", "Python", "Big Data"],
+      "bio": "Cientista de dados apaixonada por transformar dados em insights acionáveis.",
+      "education": [{ "degree": "Mestrado em Data Science", "institution": "UFPR", "year": 2019 }],
+      "experience": [
+        { "role": "Senior Data Scientist", "company": "DataCorp", "years": "2020-Presente" },
+        { "role": "Data Analyst", "company": "RetailCo", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Python", "TensorFlow", "Spark", "SQL", "Tableau", "AWS"],
+      "softSkills": ["Análise Crítica", "Apresentação", "Curiosidade"],
+      "hobbies": "Escreve tutoriais de ML, participa de competições de dados",
+      "email": "beatriz.santos@email.com"
+    },
+    {
+      "id": 6,
+      "name": "Felipe Oliveira",
+      "title": "DevOps Engineer",
+      "location": "Brasília, DF",
+      "area": "Tecnologia",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Kubernetes", "CI/CD", "Cloud Infrastructure"],
+      "bio": "Engenheiro DevOps especializado em automação e infraestrutura em nuvem.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UnB", "year": 2015 }],
+      "experience": [
+        { "role": "Senior DevOps Engineer", "company": "CloudMasters", "years": "2019-Presente" },
+        { "role": "DevOps Engineer", "company": "WebServices", "years": "2017-2019" }
+      ],
+      "technicalSkills": ["Kubernetes", "Docker", "Terraform", "AWS", "GitLab CI", "Prometheus"],
+      "softSkills": ["Atenção aos Detalhes", "Automação", "Resolução de Crises"],
+      "hobbies": "Contribui em projetos DevOps open-source, faz palestras",
+      "email": "felipe.oliveira@email.com"
+    },
+    {
+      "id": 7,
+      "name": "Sophia Martins",
+      "title": "Frontend Developer",
+      "location": "Salvador, BA",
+      "area": "Tecnologia",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Vue.js", "CSS", "JavaScript"],
+      "bio": "Desenvolvedora frontend com paixão por criar interfaces responsivas e acessíveis.",
+      "education": [{ "degree": "Análise de Sistemas", "institution": "UFBA", "year": 2016 }],
+      "experience": [
+        { "role": "Senior Frontend Developer", "company": "WebStudio", "years": "2020-Presente" },
+        { "role": "Frontend Developer", "company": "Agency.com", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Vue.js", "React", "Tailwind CSS", "TypeScript", "Webpack"],
+      "softSkills": ["Criatividade", "Atenção a Detalhes", "Adaptabilidade"],
+      "hobbies": "Cria componentes UI open-source, ensina programação",
+      "email": "sophia.martins@email.com"
+    },
+    {
+      "id": 8,
+      "name": "Roberto Alves",
+      "title": "QA Engineer",
+      "location": "Porto Alegre, RS",
+      "area": "Qualidade",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Automation Testing", "Selenium", "Test Strategy"],
+      "bio": "Engenheiro de QA com expertise em automação de testes e estratégia de qualidade.",
+      "education": [{ "degree": "Ciência da Computação", "institution": "UFRGS", "year": 2014 }],
+      "experience": [
+        { "role": "QA Lead", "company": "SoftwareCorp", "years": "2018-Presente" },
+        { "role": "QA Automation Engineer", "company": "TestingCo", "years": "2016-2018" }
+      ],
+      "technicalSkills": ["Selenium", "Cypress", "Jira", "Python", "Java", "Postman"],
+      "softSkills": ["Atenção a Detalhes", "Organização", "Documentação"],
+      "hobbies": "Automatiza testes complexos, participa de comunidades QA",
+      "email": "roberto.alves@email.com"
+    },
+    {
+      "id": 9,
+      "name": "Amanda Torres",
+      "title": "Marketing Manager",
+      "location": "Fortaleza, CE",
+      "area": "Marketing",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Marketing Digital", "SEO", "Content Strategy"],
+      "bio": "Gerente de marketing com foco em growth hacking e estratégia digital.",
+      "education": [{ "degree": "Publicidade e Propaganda", "institution": "UFC", "year": 2013 }],
+      "experience": [
+        { "role": "Head of Marketing", "company": "GrowthCo", "years": "2020-Presente" },
+        { "role": "Digital Marketing Manager", "company": "BrandAgency", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Google Analytics", "Google Ads", "Facebook Ads", "Zapier", "HubSpot"],
+      "softSkills": ["Criatividade", "Análise de Dados", "Comunicação"],
+      "hobbies": "Blogs sobre marketing digital, organiza webinars",
+      "email": "amanda.torres@email.com"
+    },
+    {
+      "id": 10,
+      "name": "Leonardo Gomes",
+      "title": "Mobile Developer",
+      "location": "Manaus, AM",
+      "area": "Tecnologia",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["React Native", "Swift", "Mobile Architecture"],
+      "bio": "Desenvolvedor mobile com 7 anos criando apps para iOS e Android.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFAM", "year": 2017 }],
+      "experience": [
+        { "role": "Senior Mobile Developer", "company": "AppStudio", "years": "2019-Presente" },
+        { "role": "Mobile Developer", "company": "StartupMobile", "years": "2017-2019" }
+      ],
+      "technicalSkills": ["React Native", "Swift", "Kotlin", "Firebase", "GraphQL"],
+      "softSkills": ["Inovação", "Problema Solving", "Curiosidade Técnica"],
+      "hobbies": "Cria apps pessoais, contribui em bibliotecas mobile",
+      "email": "leonardo.gomes@email.com"
+    },
+    {
+      "id": 11,
+      "name": "Patricia Lima",
+      "title": "Business Analyst",
+      "location": "Recife, PE",
+      "area": "Negócios",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Requirements Analysis", "Process Improvement", "Stakeholder Management"],
+      "bio": "Analista de negócios focada em transformação digital e otimização de processos.",
+      "education": [{ "degree": "Administração de Empresas", "institution": "UFPE", "year": 2012 }],
+      "experience": [
+        { "role": "Senior Business Analyst", "company": "ConsultingCorp", "years": "2019-Presente" },
+        { "role": "Business Analyst", "company": "FinanceGroup", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Jira", "Confluence", "Lucidchart", "SQL", "Tableau"],
+      "softSkills": ["Comunicação", "Negociação", "Pensamento Estratégico"],
+      "hobbies": "Facilita workshops de inovação, escreve sobre BA",
+      "email": "patricia.lima@email.com"
+    },
+    {
+      "id": 12,
+      "name": "Gabriel Ferreira",
+      "title": "Security Engineer",
+      "location": "Goiânia, GO",
+      "area": "Segurança",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Cybersecurity", "Penetration Testing", "Compliance"],
+      "bio": "Engenheiro de segurança com foco em proteção de dados e compliance.",
+      "education": [{ "degree": "Segurança da Informação", "institution": "UFG", "year": 2015 }],
+      "experience": [
+        { "role": "Lead Security Engineer", "company": "SecureGuard", "years": "2020-Presente" },
+        { "role": "Security Engineer", "company": "CyberDefense", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Penetration Testing", "Kali Linux", "Metasploit", "SIEM", "SSL/TLS"],
+      "softSkills": ["Vigilância", "Documentação", "Comunicação de Risco"],
+      "hobbies": "Participa em CTF competitions, faz auditorias de segurança",
+      "email": "gabriel.ferreira@email.com"
+    },
+    {
+      "id": 13,
+      "name": "Camila Rocha",
+      "title": "HR Manager",
+      "location": "Brasília, DF",
+      "area": "Recursos Humanos",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Talent Acquisition", "Employee Development", "Organizational Culture"],
+      "bio": "Gerente de RH com experiência em recrutamento e desenvolvimento de talentos.",
+      "education": [{ "degree": "Gestão de Recursos Humanos", "institution": "UFDF", "year": 2011 }],
+      "experience": [
+        { "role": "Head of HR", "company": "TechCorp", "years": "2019-Presente" },
+        { "role": "HR Manager", "company": "FortuneCo", "years": "2015-2019" }
+      ],
+      "technicalSkills": ["Gupy", "BambooHR", "SAP SuccessFactors", "Analytics"],
+      "softSkills": ["Empatia", "Negociação", "Liderança Inspiradora"],
+      "hobbies": "Desenvolve programas de inclusão, faz palestras sobre cultura",
+      "email": "camila.rocha@email.com"
+    },
+    {
+      "id": 14,
+      "name": "Rafael Santos",
+      "title": "Solutions Architect",
+      "location": "Rio de Janeiro, RJ",
+      "area": "Arquitetura",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["System Architecture", "Enterprise Solutions", "Cloud Design"],
+      "bio": "Arquiteto de soluções com expertise em desenho de arquiteturas empresariais.",
+      "education": [{ "degree": "Mestrado em Ciência da Computação", "institution": "UFRJ", "year": 2018 }],
+      "experience": [
+        { "role": "Principal Architect", "company": "EnterpriseOne", "years": "2020-Presente" },
+        { "role": "Solutions Architect", "company": "InfrastructureCo", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["AWS", "Azure", "Microservices", "Event-Driven Architecture"],
+      "softSkills": ["Visão Sistêmica", "Liderança Técnica", "Comunicação Complexa"],
+      "hobbies": "Escreve sobre arquitetura, faz palestras em conferências",
+      "email": "rafael.santos@email.com"
+    },
+    {
+      "id": 15,
+      "name": "Isabella Costa",
+      "title": "Content Strategist",
+      "location": "São Paulo, SP",
+      "area": "Conteúdo",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Content Planning", "SEO Copywriting", "Editorial Management"],
+      "bio": "Estrategista de conteúdo focada em storytelling e engagement.",
+      "education": [{ "degree": "Jornalismo", "institution": "PUC-SP", "year": 2010 }],
+      "experience": [
+        { "role": "Head of Content", "company": "MediaGroup", "years": "2019-Presente" },
+        { "role": "Content Manager", "company": "PublishingHouse", "years": "2015-2019" }
+      ],
+      "technicalSkills": ["WordPress", "Medium", "Contentful", "SEMrush", "Grammarly Pro"],
+      "softSkills": ["Storytelling", "Criatividade", "Escuta Ativa"],
+      "hobbies": "Publica no Medium, organiza book clubs virtuais",
+      "email": "isabella.costa@email.com"
+    },
+    {
+      "id": 16,
+      "name": "Lucas Pereira",
+      "title": "Machine Learning Engineer",
+      "location": "Campinas, SP",
+      "area": "IA",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Deep Learning", "PyTorch", "Model Deployment"],
+      "bio": "Engenheiro de ML especializado em deep learning e computer vision.",
+      "education": [{ "degree": "Doutorado em IA", "institution": "Unicamp", "year": 2020 }],
+      "experience": [
+        { "role": "Senior ML Engineer", "company": "AILabs", "years": "2020-Presente" },
+        { "role": "ML Engineer", "company": "ResearchCorp", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["PyTorch", "TensorFlow", "OpenCV", "Docker", "MLOps"],
+      "softSkills": ["Pesquisa", "Inovação", "Colaboração Científica"],
+      "hobbies": "Publica papers, contribui em projetos de IA open-source",
+      "email": "lucas.pereira@email.com"
+    },
+    {
+      "id": 17,
+      "name": "Fernanda Silva",
+      "title": "UX Researcher",
+      "location": "Belo Horizonte, MG",
+      "area": "Pesquisa",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["User Research", "Usability Testing", "Data Analysis"],
+      "bio": "Pesquisadora UX apaixonada por entender o comportamento do usuário.",
+      "education": [{ "degree": "Psicologia", "institution": "UFMG", "year": 2012 }],
+      "experience": [
+        { "role": "Senior UX Researcher", "company": "ResearchLab", "years": "2019-Presente" },
+        { "role": "UX Researcher", "company": "TechResearch", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Maze", "UserTesting", "SPSS", "Figma", "Qualtrics"],
+      "softSkills": ["Empatia", "Curiosidade", "Síntese Analítica"],
+      "hobbies": "Escreve sobre pesquisa UX, organiza workshops de design thinking",
+      "email": "fernanda.silva@email.com"
+    },
+    {
+      "id": 18,
+      "name": "Bruno Rodrigues",
+      "title": "Database Administrator",
+      "location": "Curitiba, PR",
+      "area": "Dados",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["PostgreSQL", "Oracle", "Database Optimization"],
+      "bio": "DBA especializado em otimização de performance e replicação de dados.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFPR", "year": 2013 }],
+      "experience": [
+        { "role": "Senior DBA", "company": "DataServices", "years": "2018-Presente" },
+        { "role": "Database Administrator", "company": "CorpDB", "years": "2015-2018" }
+      ],
+      "technicalSkills": ["PostgreSQL", "Oracle", "MongoDB", "Replication", "Backup"],
+      "softSkills": ["Atenção aos Detalhes", "Resolução Crítica", "Documentação"],
+      "hobbies": "Otimiza queries complexas, participa em comunidades DBA",
+      "email": "bruno.rodrigues@email.com"
+    },
+    {
+      "id": 19,
+      "name": "Mariana Gomes",
+      "title": "Systems Analyst",
+      "location": "Salvador, BA",
+      "area": "Análise",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Systems Design", "Requirements Engineering", "Integration"],
+      "bio": "Analista de sistemas com experiência em integração de plataformas.",
+      "education": [{ "degree": "Análise de Sistemas", "institution": "UFBA", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Systems Analyst", "company": "IntegrationCorp", "years": "2019-Presente" },
+        { "role": "Systems Analyst", "company": "SolutionsCo", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Jira", "Confluence", "UML", "API Design", "SOAP/REST"],
+      "softSkills": ["Comunicação Técnica", "Problem Solving", "Colaboração"],
+      "hobbies": "Ensina arquitetura de sistemas, faz palestras técnicas",
+      "email": "mariana.gomes@email.com"
+    },
+    {
+      "id": 20,
+      "name": "Thiago Oliveira",
+      "title": "Network Engineer",
+      "location": "Porto Alegre, RS",
+      "area": "Infraestrutura",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Networking", "Cisco", "Network Security"],
+      "bio": "Engenheiro de rede especializado em infraestrutura segura e escalável.",
+      "education": [{ "degree": "Engenharia de Telecomunicações", "institution": "UFRGS", "year": 2011 }],
+      "experience": [
+        { "role": "Senior Network Engineer", "company": "NetworkCorp", "years": "2018-Presente" },
+        { "role": "Network Engineer", "company": "InfrastructureCo", "years": "2015-2018" }
+      ],
+      "technicalSkills": ["Cisco IOS", "Juniper", "Wireshark", "BGP", "MPLS"],
+      "softSkills": ["Diagnóstico", "Persistência", "Resolução de Crises"],
+      "hobbies": "Estuda certificações Cisco, mantém lab de networking",
+      "email": "thiago.oliveira@email.com"
+    },
+    {
+      "id": 21,
+      "name": "Valentina Martins",
+      "title": "Growth Manager",
+      "location": "Fortaleza, CE",
+      "area": "Growth",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Growth Hacking", "Analytics", "A/B Testing"],
+      "bio": "Growth Manager focada em escalabilidade e métricas de produto.",
+      "education": [{ "degree": "Administração", "institution": "UFC", "year": 2015 }],
+      "experience": [
+        { "role": "Head of Growth", "company": "GrowthStart", "years": "2020-Presente" },
+        { "role": "Growth Manager", "company": "FinTechApp", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Analytics", "Mixpanel", "Amplitude", "Excel", "SQL"],
+      "softSkills": ["Experimentação", "Data-Driven", "Comunicação"],
+      "hobbies": "Escreve sobre growth, apresenta em conferências",
+      "email": "valentina.martins@email.com"
+    },
+    {
+      "id": 22,
+      "name": "Gustavo Barbosa",
+      "title": "Technical Writer",
+      "location": "Manaus, AM",
+      "area": "Documentação",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Technical Documentation", "API Documentation", "Video Production"],
+      "bio": "Escritor técnico especializado em documentação de APIs e tutoriais.",
+      "education": [{ "degree": "Letras - Português", "institution": "UFAM", "year": 2013 }],
+      "experience": [
+        { "role": "Senior Technical Writer", "company": "DocsCorp", "years": "2019-Presente" },
+        { "role": "Technical Writer", "company": "SoftwareHouse", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Markdown", "Sphinx", "Git", "Video Editing", "Figma"],
+      "softSkills": ["Clareza", "Atenção a Detalhes", "Pesquisa"],
+      "hobbies": "Cria tutoriais em vídeo, escreve blogs técnicos",
+      "email": "gustavo.barbosa@email.com"
+    },
+    {
+      "id": 23,
+      "name": "Larissa Silva",
+      "title": "Scrum Master",
+      "location": "Recife, PE",
+      "area": "Agile",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Agile Methodology", "Team Coaching", "Process Improvement"],
+      "bio": "Scrum Master certificada focada em transformação ágil de equipes.",
+      "education": [{ "degree": "Administração", "institution": "UFPE", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Scrum Master", "company": "AgileCorp", "years": "2019-Presente" },
+        { "role": "Scrum Master", "company": "TransformationCo", "years": "2017-2019" }
+      ],
+      "technicalSkills": ["Jira", "Confluence", "Miro", "Tableau", "Slack"],
+      "softSkills": ["Facilitação", "Coaching", "Resolução de Conflitos"],
+      "hobbies": "Organiza meetups ágeis, facilita workshops Scrum",
+      "email": "larissa.silva@email.com"
+    },
+    {
+      "id": 24,
+      "name": "Ricardo Santos",
+      "title": "IT Support Manager",
+      "location": "Goiânia, GO",
+      "area": "Suporte",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["IT Support", "Help Desk Management", "System Administration"],
+      "bio": "Gerente de TI focado em suporte ao usuário e operação de sistemas.",
+      "education": [{ "degree": "Tecnologia em Redes", "institution": "UFG", "year": 2012 }],
+      "experience": [
+        { "role": "IT Support Manager", "company": "TechSupport", "years": "2018-Presente" },
+        { "role": "IT Technician", "company": "CorporateIT", "years": "2015-2018" }
+      ],
+      "technicalSkills": ["Windows Server", "Active Directory", "ServiceNow", "Ticketing"],
+      "softSkills": ["Empatia", "Resolução Rápida", "Documentação"],
+      "hobbies": "Certifica-se em novas tecnologias, treina novos técnicos",
+      "email": "ricardo.santos@email.com"
+    },
+    {
+      "id": 25,
+      "name": "Juliana Ribeiro",
+      "title": "Brand Manager",
+      "location": "Brasília, DF",
+      "area": "Branding",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Brand Strategy", "Visual Identity", "Market Research"],
+      "bio": "Gerente de marca com experiência em construção de identidades visuais.",
+      "education": [{ "degree": "Publicidade e Propaganda", "institution": "UFDF", "year": 2011 }],
+      "experience": [
+        { "role": "Senior Brand Manager", "company": "BrandCorp", "years": "2019-Presente" },
+        { "role": "Brand Manager", "company": "MarketingAgency", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Adobe Suite", "Figma", "Canva", "Brand Book", "Guidelines"],
+      "softSkills": ["Visão Estratégica", "Criatividade", "Comunicação"],
+      "hobbies": "Desenvolve guias de marca, faz palestras sobre branding",
+      "email": "juliana.ribeiro@email.com"
+    },
+    {
+      "id": 26,
+      "name": "André Vieira",
+      "title": "Cloud Architect",
+      "location": "Rio de Janeiro, RJ",
+      "area": "Cloud",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["AWS", "Microservices", "Serverless"],
+      "bio": "Arquiteto de nuvem especializado em arquiteturas serverless e escaláveis.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFRJ", "year": 2017 }],
+      "experience": [
+        { "role": "Principal Cloud Architect", "company": "CloudFirst", "years": "2020-Presente" },
+        { "role": "Cloud Architect", "company": "DigitalTransform", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["AWS Lambda", "RDS", "S3", "ECS", "CloudFormation"],
+      "softSkills": ["Pensamento Escalável", "Liderança Técnica", "Mentorias"],
+      "hobbies": "Palestras sobre cloud, contribui em blogs técnicos",
+      "email": "andre.vieira@email.com"
+    },
+    {
+      "id": 27,
+      "name": "Débora Almeida",
+      "title": "Legal Compliance Officer",
+      "location": "São Paulo, SP",
+      "area": "Compliance",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Compliance", "Data Privacy", "Regulatory Affairs"],
+      "bio": "Oficial de compliance com expertise em LGPD e privacidade de dados.",
+      "education": [{ "degree": "Direito", "institution": "USP", "year": 2010 }],
+      "experience": [
+        { "role": "Senior Compliance Officer", "company": "LegalCorp", "years": "2019-Presente" },
+        { "role": "Compliance Analyst", "company": "FinanceRegulation", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["LGPD", "GDPR", "ISO 27001", "Auditing", "Documentation"],
+      "softSkills": ["Análise Legal", "Negociação", "Documentação Rigorosa"],
+      "hobbies": "Escreve sobre compliance, participa em webinars de LGPD",
+      "email": "debora.almeida@email.com"
+    },
+    {
+      "id": 28,
+      "name": "Felipe Martins",
+      "title": "Financial Analyst",
+      "location": "Belo Horizonte, MG",
+      "area": "Finanças",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Financial Analysis", "Forecasting", "Business Intelligence"],
+      "bio": "Analista financeiro com foco em análise preditiva e inteligência de negócios.",
+      "education": [{ "degree": "Contabilidade", "institution": "UFMG", "year": 2013 }],
+      "experience": [
+        { "role": "Senior Financial Analyst", "company": "FinanceGroup", "years": "2019-Presente" },
+        { "role": "Financial Analyst", "company": "InvestmentCorp", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Power BI", "Python", "SAP", "Excel Avançado", "Tableau"],
+      "softSkills": ["Análise Crítica", "Comunicação Executiva", "Atenção a Detalhes"],
+      "hobbies": "Investe em criptomoedas, escreve sobre finanças pessoais",
+      "email": "felipe.martins@email.com"
+    },
+    {
+      "id": 29,
+      "name": "Renata Souza",
+      "title": "Supply Chain Manager",
+      "location": "Curitiba, PR",
+      "area": "Supply Chain",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Supply Chain Optimization", "Logistics", "Vendor Management"],
+      "bio": "Gerente de supply chain com expertise em otimização de processos logísticos.",
+      "education": [{ "degree": "Engenharia de Produção", "institution": "UFPR", "year": 2012 }],
+      "experience": [
+        { "role": "Senior Supply Chain Manager", "company": "LogisticsCorp", "years": "2019-Presente" },
+        { "role": "Supply Chain Analyst", "company": "RetailGroup", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["SAP", "Tableau", "Logistics Software", "Excel", "Analytics"],
+      "softSkills": ["Negociação", "Liderança", "Pensamento Estratégico"],
+      "hobbies": "Otimiza processos, apresenta em conferências de supply chain",
+      "email": "renata.souza@email.com"
+    },
+    {
+      "id": 30,
+      "name": "Diego Costa",
+      "title": "Customer Success Manager",
+      "location": "Salvador, BA",
+      "area": "Sucesso do Cliente",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Customer Management", "Account Management", "Retention Strategy"],
+      "bio": "Gerente de sucesso do cliente focado em retenção e crescimento.",
+      "education": [{ "degree": "Administração", "institution": "UFBA", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Customer Success Manager", "company": "SaaS Company", "years": "2019-Presente" },
+        { "role": "Account Manager", "company": "ServiceCorp", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Salesforce", "Intercom", "Mixpanel", "Slack", "Zendesk"],
+      "softSkills": ["Empatia", "Relacionamento", "Problem Solving"],
+      "hobbies": "Organiza customer success meetups, escreve case studies",
+      "email": "diego.costa@email.com"
+    },
+    {
+      "id": 31,
+      "name": "Beatriz Neves",
+      "title": "Graphic Designer",
+      "location": "Porto Alegre, RS",
+      "area": "Design",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Graphic Design", "Illustration", "Motion Design"],
+      "bio": "Designer gráfica especializada em identidade visual e design de movimento.",
+      "education": [{ "degree": "Design", "institution": "UFRGS", "year": 2015 }],
+      "experience": [
+        { "role": "Senior Graphic Designer", "company": "DesignStudio", "years": "2019-Presente" },
+        { "role": "Graphic Designer", "company": "AgencyXYZ", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Adobe Suite", "Illustrator", "After Effects", "Figma"],
+      "softSkills": ["Criatividade", "Atenção a Detalhes", "Comunicação Visual"],
+      "hobbies": "Cria projetos freelance, mantém portfolio no Behance",
+      "email": "beatriz.neves@email.com"
+    },
+    {
+      "id": 32,
+      "name": "Rodrigo Mendes",
+      "title": "VR/AR Developer",
+      "location": "Fortaleza, CE",
+      "area": "Realidade Virtual",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Unity", "VR Development", "3D Modeling"],
+      "bio": "Desenvolvedor VR/AR com experiência em experiências imersivas inovadoras.",
+      "education": [{ "degree": "Ciência da Computação", "institution": "UFC", "year": 2016 }],
+      "experience": [
+        { "role": "Senior VR Developer", "company": "VRStudio", "years": "2019-Presente" },
+        { "role": "AR Developer", "company": "InnovationLab", "years": "2017-2019" }
+      ],
+      "technicalSkills": ["Unity", "Unreal Engine", "C#", "Blender", "WebXR"],
+      "softSkills": ["Criatividade", "Inovação", "Colaboração Criativa"],
+      "hobbies": "Cria experiências VR experimentais, apresenta em conferências",
+      "email": "rodrigo.mendes@email.com"
+    },
+    {
+      "id": 33,
+      "name": "Camila Dias",
+      "title": "Environmental Scientist",
+      "location": "Manaus, AM",
+      "area": "Sustentabilidade",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Environmental Analysis", "Sustainability", "Data Collection"],
+      "bio": "Cientista ambiental focada em sustentabilidade e análise de impacto.",
+      "education": [{ "degree": "Engenharia Ambiental", "institution": "UFAM", "year": 2013 }],
+      "experience": [
+        { "role": "Senior Environmental Scientist", "company": "EcoSystems", "years": "2019-Presente" },
+        { "role": "Environmental Analyst", "company": "GreenCorp", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["GIS", "Python", "Environmental Modeling", "Tableau"],
+      "softSkills": ["Paixão pela Natureza", "Análise Crítica", "Comunicação"],
+      "hobbies": "Trabalha em projetos de conservação, escreve sobre sustentabilidade",
+      "email": "camila.dias@email.com"
+    },
+    {
+      "id": 34,
+      "name": "Matheus Silva",
+      "title": "Blockchain Developer",
+      "location": "Recife, PE",
+      "area": "Blockchain",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Smart Contracts", "Ethereum", "Solidity"],
+      "bio": "Desenvolvedor blockchain especializado em smart contracts e DeFi.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFPE", "year": 2018 }],
+      "experience": [
+        { "role": "Senior Blockchain Developer", "company": "BlockchainCorp", "years": "2021-Presente" },
+        { "role": "Blockchain Developer", "company": "CryptoStartup", "years": "2019-2021" }
+      ],
+      "technicalSkills": ["Solidity", "Web3", "Ethereum", "Hardhat", "Truffle"],
+      "softSkills": ["Inovação", "Segurança", "Pesquisa Técnica"],
+      "hobbies": "Contribui em protocolos blockchain, estuda tokenomics",
+      "email": "matheus.silva@email.com"
+    },
+    {
+      "id": 35,
+      "name": "Sandra Oliveira",
+      "title": "Educational Coordinator",
+      "location": "Goiânia, GO",
+      "area": "Educação",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Curriculum Design", "Training Program", "E-Learning"],
+      "bio": "Coordenadora educacional especializada em design instrucional e LMS.",
+      "education": [{ "degree": "Pedagogia", "institution": "UFG", "year": 2011 }],
+      "experience": [
+        { "role": "Senior Educational Coordinator", "company": "EduTech", "years": "2019-Presente" },
+        { "role": "Training Manager", "company": "CorporateEd", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Moodle", "Adobe Captivate", "Articulate", "Google Workspace"],
+      "softSkills": ["Ensino", "Facilitação", "Comunicação Clara"],
+      "hobbies": "Desenvolve cursos online, faz palestras sobre educação corporativa",
+      "email": "sandra.oliveira@email.com"
+    },
+    {
+      "id": 36,
+      "name": "Paulo Santos",
+      "title": "Robotics Engineer",
+      "location": "Brasília, DF",
+      "area": "Robótica",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Robot Programming", "Automation", "Control Systems"],
+      "bio": "Engenheiro de robótica com experiência em automação industrial.",
+      "education": [{ "degree": "Engenharia de Automação", "institution": "UFDF", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Robotics Engineer", "company": "RoboticsLab", "years": "2020-Presente" },
+        { "role": "Robotics Engineer", "company": "AutomationCorp", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["ROS", "C++", "Python", "CAD", "PLC Programming"],
+      "softSkills": ["Resolução de Problemas", "Precisão", "Inovação"],
+      "hobbies": "Compete em competições de robótica, contribui em ROS",
+      "email": "paulo.santos@email.com"
+    },
+    {
+      "id": 37,
+      "name": "Natalia Gomes",
+      "title": "Voice Interface Designer",
+      "location": "Rio de Janeiro, RJ",
+      "area": "Voice Tech",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Voice Design", "NLU", "Conversational AI"],
+      "bio": "Designer de interface de voz focada em experiências conversacionais.",
+      "education": [{ "degree": "Linguística", "institution": "UFRJ", "year": 2015 }],
+      "experience": [
+        { "role": "Senior Voice Designer", "company": "VoiceTech", "years": "2020-Presente" },
+        { "role": "Conversational Designer", "company": "ChatbotCorp", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Dialogflow", "Alexa", "Google Assistant", "Voiceflow"],
+      "softSkills": ["Linguística", "Empatia", "Criatividade"],
+      "hobbies": "Estuda NLU, cria assistentes de voz experimentais",
+      "email": "natalia.gomes@email.com"
+    },
+    {
+      "id": 38,
+      "name": "Gustavo Lima",
+      "title": "IoT Engineer",
+      "location": "Belo Horizonte, MG",
+      "area": "IoT",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Embedded Systems", "MQTT", "IoT Architecture"],
+      "bio": "Engenheiro IoT com expertise em sistemas embarcados e conectividade.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFMG", "year": 2016 }],
+      "experience": [
+        { "role": "Senior IoT Engineer", "company": "IoTSolutions", "years": "2020-Presente" },
+        { "role": "IoT Developer", "company": "ConnectedDevices", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Arduino", "Raspberry Pi", "MQTT", "CoAP", "Kubernetes"],
+      "softSkills": ["Inovação", "Integração Criativa", "Resolução de Problema"],
+      "hobbies": "Cria projetos IoT, contribui em comunidades maker",
+      "email": "gustavo.lima@email.com"
+    },
+    {
+      "id": 39,
+      "name": "Fernanda Pires",
+      "title": "Game Developer",
+      "location": "Curitiba, PR",
+      "area": "Games",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Unity", "Game Design", "C#"],
+      "bio": "Desenvolvedora de games com foco em game design e mecânicas inovadoras.",
+      "education": [{ "degree": "Game Design", "institution": "UFPR", "year": 2017 }],
+      "experience": [
+        { "role": "Senior Game Developer", "company": "GameStudio", "years": "2020-Presente" },
+        { "role": "Game Developer", "company": "IndieGames", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Unity", "C#", "Unreal Engine", "Blender", "Wwise"],
+      "softSkills": ["Criatividade", "Design Thinking", "Prototipagem"],
+      "hobbies": "Cria games indie, participa em game jams",
+      "email": "fernanda.pires@email.com"
+    },
+    {
+      "id": 40,
+      "name": "Wilson Santos",
+      "title": "Agile Coach",
+      "location": "Salvador, BA",
+      "area": "Agile",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Agile Transformation", "Coaching", "Organizational Change"],
+      "bio": "Agile coach facilitador de transformação organizacional e mudança cultural.",
+      "education": [{ "degree": "Administração", "institution": "UFBA", "year": 2010 }],
+      "experience": [
+        { "role": "Senior Agile Coach", "company": "AgileCorp", "years": "2018-Presente" },
+        { "role": "Scrum Master", "company": "TransformationCo", "years": "2015-2018" }
+      ],
+      "technicalSkills": ["SAFe", "Scrum", "Kanban", "Jira", "Miro"],
+      "softSkills": ["Liderança Transformacional", "Coaching", "Facilitação"],
+      "hobbies": "Organiza conferências ágeis, escreve sobre transformação",
+      "email": "wilson.santos@email.com"
+    },
+    {
+      "id": 41,
+      "name": "Isadora Costa",
+      "title": "API Developer",
+      "location": "Porto Alegre, RS",
+      "area": "Backend",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["REST API", "GraphQL", "API Design"],
+      "bio": "Desenvolvedora de APIs focada em design de interfaces robustas.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFRGS", "year": 2018 }],
+      "experience": [
+        { "role": "Senior API Developer", "company": "APICorp", "years": "2020-Presente" },
+        { "role": "Backend Developer", "company": "TechServices", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Node.js", "GraphQL", "OpenAPI", "Kong", "FastAPI"],
+      "softSkills": ["Design Thinking", "Documentação", "Colaboração"],
+      "hobbies": "Escreve sobre API design, contribui em SDKs",
+      "email": "isadora.costa@email.com"
+    },
+    {
+      "id": 42,
+      "name": "Jorge Pereira",
+      "title": "Machine Vision Specialist",
+      "location": "Fortaleza, CE",
+      "area": "Visão Computacional",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["OpenCV", "Computer Vision", "Image Processing"],
+      "bio": "Especialista em visão computacional e processamento de imagem.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFC", "year": 2015 }],
+      "experience": [
+        { "role": "Senior Vision Specialist", "company": "VisionTech", "years": "2020-Presente" },
+        { "role": "Computer Vision Engineer", "company": "ImageCorp", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["OpenCV", "TensorFlow", "Scikit-Image", "Deep Learning"],
+      "softSkills": ["Análise", "Pesquisa", "Inovação"],
+      "hobbies": "Publica papers em visão computacional, participa em competições",
+      "email": "jorge.pereira@email.com"
+    },
+    {
+      "id": 43,
+      "name": "Cecília Martins",
+      "title": "Accessibility Specialist",
+      "location": "Manaus, AM",
+      "area": "Acessibilidade",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["WCAG", "A11y", "Inclusive Design"],
+      "bio": "Especialista em acessibilidade focada em design inclusivo.",
+      "education": [{ "degree": "Design", "institution": "UFAM", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Accessibility Specialist", "company": "AccessibleTech", "years": "2019-Presente" },
+        { "role": "Accessibility Consultant", "company": "InclusiveCorp", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["WCAG", "Axe", "JAWS", "NVDA", "Accessibility Testing"],
+      "softSkills": ["Empatia", "Atenção a Detalhes", "Educação"],
+      "hobbies": "Palestras sobre a11y, contribui em projetos inclusivos",
+      "email": "cecilia.martins@email.com"
+    },
+    {
+      "id": 44,
+      "name": "Henrique Rocha",
+      "title": "Performance Engineer",
+      "location": "Recife, PE",
+      "area": "Performance",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Performance Optimization", "Profiling", "Benchmarking"],
+      "bio": "Engenheiro de performance especializado em otimização de código.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFPE", "year": 2016 }],
+      "experience": [
+        { "role": "Senior Performance Engineer", "company": "PerformanceCorp", "years": "2019-Presente" },
+        { "role": "Performance Analyst", "company": "OptimizationCo", "years": "2017-2019" }
+      ],
+      "technicalSkills": ["Profiling Tools", "Benchmarking", "Flame Graphs", "JVM"],
+      "softSkills": ["Análise Crítica", "Resolução Metódica", "Documentação"],
+      "hobbies": "Otimiza aplicações, escreve sobre performance",
+      "email": "henrique.rocha@email.com"
+    },
+    {
+      "id": 45,
+      "name": "Lorena Silva",
+      "title": "Crisis Manager",
+      "location": "Goiânia, GO",
+      "area": "Gestão de Crise",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Crisis Management", "Communication", "Risk Assessment"],
+      "bio": "Gerente de crise especializada em comunicação em situações críticas.",
+      "education": [{ "degree": "Comunicação Social", "institution": "UFG", "year": 2012 }],
+      "experience": [
+        { "role": "Senior Crisis Manager", "company": "CrisusCorp", "years": "2018-Presente" },
+        { "role": "Communications Manager", "company": "PublicRelations", "years": "2015-2018" }
+      ],
+      "technicalSkills": ["Crisis Planning", "Media Training", "Monitoring Tools"],
+      "softSkills": ["Comunicação de Emergência", "Calma sob Pressão", "Liderança"],
+      "hobbies": "Treina executivos, participa em simulações de crise",
+      "email": "lorena.silva@email.com"
+    },
+    {
+      "id": 46,
+      "name": "Felipe Gomes",
+      "title": "Augmented Reality Developer",
+      "location": "Brasília, DF",
+      "area": "AR",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["ARKit", "ARCore", "WebAR"],
+      "bio": "Desenvolvedor AR especializado em experiências aumentadas inovadoras.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFDF", "year": 2017 }],
+      "experience": [
+        { "role": "Senior AR Developer", "company": "ARStudio", "years": "2020-Presente" },
+        { "role": "AR Developer", "company": "InnovationLab", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["ARKit", "ARCore", "Babylon.js", "Three.js", "WebXR"],
+      "softSkills": ["Criatividade", "Inovação", "Resolução de Problema"],
+      "hobbies": "Cria experiências AR experimentais, palestras em conferências",
+      "email": "felipe.gomes@email.com"
+    },
+    {
+      "id": 47,
+      "name": "Vanessa Alves",
+      "title": "Diversity and Inclusion Lead",
+      "location": "Rio de Janeiro, RJ",
+      "area": "Inclusão",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Diversity Programs", "Inclusive Hiring", "Cultural Change"],
+      "bio": "Líder de diversidade e inclusão focada em transformação cultural.",
+      "education": [{ "degree": "Recursos Humanos", "institution": "UFRJ", "year": 2011 }],
+      "experience": [
+        { "role": "Senior D&I Lead", "company": "DiversityCorp", "years": "2019-Presente" },
+        { "role": "D&I Manager", "company": "TransformationCo", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Diversity Analytics", "Survey Tools", "Change Management"],
+      "softSkills": ["Empatia", "Liderança Transformacional", "Comunicação"],
+      "hobbies": "Organiza eventos de inclusão, faz palestras sobre D&I",
+      "email": "vanessa.alves@email.com"
+    },
+    {
+      "id": 48,
+      "name": "Marco Antonio",
+      "title": "Quantum Developer",
+      "location": "Belo Horizonte, MG",
+      "area": "Computação Quântica",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Quantum Computing", "Qiskit", "Quantum Algorithms"],
+      "bio": "Desenvolvedor quântico pioneiro em algoritmos quânticos.",
+      "education": [{ "degree": "Doutorado em Computação Quântica", "institution": "UFMG", "year": 2021 }],
+      "experience": [
+        { "role": "Quantum Developer", "company": "QuantumLab", "years": "2021-Presente" },
+        { "role": "Quantum Researcher", "company": "ResearchCenter", "years": "2019-2021" }
+      ],
+      "technicalSkills": ["Qiskit", "Cirq", "Q#", "Quantum Simulation"],
+      "softSkills": ["Pesquisa", "Inovação", "Comunicação Científica"],
+      "hobbies": "Publica papers em computação quântica, palestras em conferências",
+      "email": "marco.antonio@email.com"
+    },
+    {
+      "id": 49,
+      "name": "Sofia Ribeiro",
+      "title": "Zero Trust Architect",
+      "location": "Curitiba, PR",
+      "area": "Segurança",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Zero Trust", "Identity Management", "Cloud Security"],
+      "bio": "Arquiteta de segurança especializada em arquitetura Zero Trust.",
+      "education": [{ "degree": "Segurança da Informação", "institution": "UFPR", "year": 2014 }],
+      "experience": [
+        { "role": "Senior Zero Trust Architect", "company": "SecurityFirst", "years": "2020-Presente" },
+        { "role": "Security Architect", "company": "CyberSecurityCo", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["IAM", "SASE", "Cloud Security", "Microsegmentation"],
+      "softSkills": ["Segurança em Profundidade", "Liderança", "Consultoria"],
+      "hobbies": "Palestras sobre Zero Trust, contribui em padrões de segurança",
+      "email": "sofia.ribeiro@email.com"
+    },
+    {
+      "id": 50,
+      "name": "Tiago Oliveira",
+      "title": "Edge Computing Engineer",
+      "location": "Salvador, BA",
+      "area": "Edge",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Edge Computing", "5G", "Latency Optimization"],
+      "bio": "Engenheiro de edge computing especializado em computação de borda.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFBA", "year": 2017 }],
+      "experience": [
+        { "role": "Senior Edge Engineer", "company": "EdgeCorp", "years": "2020-Presente" },
+        { "role": "Edge Developer", "company": "5GNetworks", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["5G", "MEC", "MQTT", "Kubernetes", "IoT"],
+      "softSkills": ["Inovação", "Otimização", "Resolução de Problema"],
+      "hobbies": "Escreve sobre edge computing, contribui em projetos de 5G",
+      "email": "tiago.oliveira@email.com"
+    },
+    {
+      "id": 51,
+      "name": "Amanda Costa",
+      "title": "Frontend Team Lead",
+      "location": "Porto Alegre, RS",
+      "area": "Liderança",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Team Leadership", "Frontend Architecture", "Mentoring"],
+      "bio": "Líder técnica de frontend com foco em desenvolvimento de equipes.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFRGS", "year": 2015 }],
+      "experience": [
+        { "role": "Frontend Team Lead", "company": "TechCorp", "years": "2020-Presente" },
+        { "role": "Senior Frontend Developer", "company": "WebStudio", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["React", "TypeScript", "Architecture", "Mentoring"],
+      "softSkills": ["Liderança", "Comunicação", "Desenvolvimento de Talentos"],
+      "hobbies": "Organiza meetups frontend, mentorias técnicas",
+      "email": "amanda.costa@email.com"
+    },
+    {
+      "id": 52,
+      "name": "Rodrigo Lima",
+      "title": "Streaming Architect",
+      "location": "Fortaleza, CE",
+      "area": "Streaming",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Kafka", "Streaming", "Real-time Processing"],
+      "bio": "Arquiteto de streaming especializado em processamento de dados em tempo real.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFC", "year": 2016 }],
+      "experience": [
+        { "role": "Senior Streaming Architect", "company": "StreamingCorp", "years": "2020-Presente" },
+        { "role": "Streaming Engineer", "company": "DataServices", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Kafka", "Flink", "Spark Streaming", "Kinesis"],
+      "softSkills": ["Arquitetura", "Escalabilidade", "Comunicação"],
+      "hobbies": "Palestras sobre streaming, contribui em Kafka",
+      "email": "rodrigo.lima@email.com"
+    },
+    {
+      "id": 53,
+      "name": "Bianca Ferreira",
+      "title": "SRE (Site Reliability Engineer)",
+      "location": "Manaus, AM",
+      "area": "DevOps",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["SRE Practices", "Monitoring", "Incident Management"],
+      "bio": "Engenheira SRE focada em confiabilidade e operação de sistemas.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFAM", "year": 2017 }],
+      "experience": [
+        { "role": "Senior SRE", "company": "ReliabilityCorp", "years": "2020-Presente" },
+        { "role": "Site Reliability Engineer", "company": "CloudServices", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Prometheus", "Grafana", "Incident Management", "Kubernetes"],
+      "softSkills": ["Resiliência", "Documentação", "Resolução de Problemas"],
+      "hobbies": "Escreve sobre SRE, contribui em ferramentas de observabilidade",
+      "email": "bianca.ferreira@email.com"
+    },
+    {
+      "id": 54,
+      "name": "Marcelo Dias",
+      "title": "Enterprise Architect",
+      "location": "Recife, PE",
+      "area": "Arquitetura",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Enterprise Architecture", "Digital Transformation", "Strategy"],
+      "bio": "Arquiteto empresarial especializado em transformação digital.",
+      "education": [{ "degree": "Mestrado em Arquitetura", "institution": "UFPE", "year": 2015 }],
+      "experience": [
+        { "role": "Enterprise Architect", "company": "EnterpriseCorp", "years": "2019-Presente" },
+        { "role": "Solutions Architect", "company": "TransformationCo", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["TOGAF", "Architecture Modeling", "Strategy", "Planning"],
+      "softSkills": ["Visão Estratégica", "Liderança", "Comunicação Executiva"],
+      "hobbies": "Palestras sobre arquitetura, escreve sobre transformação digital",
+      "email": "marcelo.dias@email.com"
+    },
+    {
+      "id": 55,
+      "name": "Giovana Rocha",
+      "title": "Product Designer",
+      "location": "Goiânia, GO",
+      "area": "Design",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["Product Design", "Design Systems", "Prototyping"],
+      "bio": "Designers de produto com foco em design systems e coesão visual.",
+      "education": [{ "degree": "Design de Produto", "institution": "UFG", "year": 2016 }],
+      "experience": [
+        { "role": "Senior Product Designer", "company": "DesignCorp", "years": "2020-Presente" },
+        { "role": "Product Designer", "company": "TechStudio", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Figma", "Design Systems", "Prototyping", "Research"],
+      "softSkills": ["Criatividade", "Colaboração", "Pensamento Crítico"],
+      "hobbies": "Cria design systems, contribui em comunidades de design",
+      "email": "giovana.rocha@email.com"
+    },
+    {
+      "id": 56,
+      "name": "Cesar Montoya",
+      "title": "Infrastructure as Code Engineer",
+      "location": "Brasília, DF",
+      "area": "DevOps",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Terraform", "Infrastructure as Code", "CloudFormation"],
+      "bio": "Engenheiro IaC especializado em infraestrutura programável.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFDF", "year": 2015 }],
+      "experience": [
+        { "role": "Senior IaC Engineer", "company": "InfrastructureCorp", "years": "2020-Presente" },
+        { "role": "DevOps Engineer", "company": "CloudServices", "years": "2018-2020" }
+      ],
+      "technicalSkills": ["Terraform", "CloudFormation", "Ansible", "Pulumi"],
+      "softSkills": ["Automatização", "Atenção a Detalhes", "Documentação"],
+      "hobbies": "Contribui em Terraform modules, palestras sobre IaC",
+      "email": "cesar.montoya@email.com"
+    },
+    {
+      "id": 57,
+      "name": "Raquel Silva",
+      "title": "Technical Recruiter",
+      "location": "Rio de Janeiro, RJ",
+      "area": "RH",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "skills": ["Tech Recruiting", "Talent Assessment", "Networking"],
+      "bio": "Recrutadora técnica especializada em recrutamento de talentos.",
+      "education": [{ "degree": "Recursos Humanos", "institution": "UFRJ", "year": 2012 }],
+      "experience": [
+        { "role": "Head of Technical Recruiting", "company": "TechRecruit", "years": "2019-Presente" },
+        { "role": "Technical Recruiter", "company": "TalentCorp", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Tech Assessment", "LinkedIn", "Recruiting Tools", "Interview"],
+      "softSkills": ["Comunicação", "Networking", "Avaliação de Talentos"],
+      "hobbies": "Organiza eventos de networking, menotria de candidatos",
+      "email": "raquel.silva@email.com"
+    },
+    {
+      "id": 58,
+      "name": "Osvaldo Ferreira",
+      "title": "Legacy Systems Modernizer",
+      "location": "Belo Horizonte, MG",
+      "area": "Modernização",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      "skills": ["Legacy Modernization", "Refactoring", "Migration"],
+      "bio": "Especialista em modernização de sistemas legados e migração.",
+      "education": [{ "degree": "Engenharia de Software", "institution": "UFMG", "year": 2013 }],
+      "experience": [
+        { "role": "Senior Modernization Specialist", "company": "ModernizationCorp", "years": "2019-Presente" },
+        { "role": "Software Architect", "company": "LegacySystems", "years": "2016-2019" }
+      ],
+      "technicalSkills": ["Refactoring", "Migration Patterns", "Legacy Code", "Strangler"],
+      "softSkills": ["Paciência", "Resolução de Problema", "Documentação"],
+      "hobbies": "Palestras sobre modernização, contribui em frameworks",
+      "email": "osvaldo.ferreira@email.com"
+    },
+    {
+      "id": 59,
+      "name": "Cristina Oliveira",
+      "title": "API Gateway Specialist",
+      "location": "Curitiba, PR",
+      "area": "API",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "skills": ["API Gateway", "API Management", "Rate Limiting"],
+      "bio": "Especialista em API Gateway e gerenciamento de APIs.",
+      "education": [{ "degree": "Engenharia de Computação", "institution": "UFPR", "year": 2014 }],
+      "experience": [
+        { "role": "Senior API Gateway Specialist", "company": "APIGatewayCP", "years": "2020-Presente" },
+        { "role": "API Engineer", "company": "IntegrationServices", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["Kong", "AWS API Gateway", "Rate Limiting", "API Policies"],
+      "softSkills": ["Design de API", "Segurança", "Documentação"],
+      "hobbies": "Palestras sobre API gateways, contribui em Kong",
+      "email": "cristina.oliveira@email.com"
+    },
+    {
+      "id": 60,
+      "name": "André Borges",
+      "title": "Full Stack Architect",
+      "location": "Salvador, BA",
+      "area": "Arquitetura",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "skills": ["Full Stack Architecture", "System Design", "Technology Strategy"],
+      "bio": "Arquiteto full stack com experiência em design de sistemas completos.",
+      "education": [{ "degree": "Mestrado em Ciência da Computação", "institution": "UFBA", "year": 2019 }],
+      "experience": [
+        { "role": "Principal Full Stack Architect", "company": "FullStackCorp", "years": "2020-Presente" },
+        { "role": "Solutions Architect", "company": "TechArchitects", "years": "2017-2020" }
+      ],
+      "technicalSkills": ["System Design", "Microservices", "Frontend", "Backend"],
+      "softSkills": ["Visão Holística", "Liderança Técnica", "Mentoria"],
+      "hobbies": "Palestras sobre arquitetura, escreve sobre design de sistemas",
+      "email": "andre.borges@email.com"
+    }
+  ]
 }

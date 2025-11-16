@@ -16,5 +16,9 @@ app.get("/profissionais", (req, res) => {
     res.json(JSON.parse(data));
   });
 });
+const PORT = 3001;
 
-app.listen(3001, () => console.log("Server rodando na porta 3001"));
+app.listen(PORT, () => {
+  console.log(`Backend rodando na porta ${PORT}`);
+});
+

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+
+
 export default function Profissionais() {
 
   const [lista, setLista] = useState([]);
@@ -10,8 +12,9 @@ export default function Profissionais() {
 
   useEffect(() => {
     fetch("http://localhost:3001/profissionais")
-      .then(res => res.json())
-      .then(data => setLista(data));
+  .then(res => res.json())
+  .then(data => setProfissionais(data))
+  .catch(err => console.error("Erro ao carregar profissionais:", err));
   }, []);
 
   const filtrados = lista.filter(p => {
