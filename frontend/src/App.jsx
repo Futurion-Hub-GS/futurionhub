@@ -129,8 +129,20 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
       />
 
       
-      <Route path="/profissionais" 
-      element={<Profissionais />}/>
+      <Route
+          path="/profissionais"
+          element={
+            logado ? (
+              <Profissionais
+                username={usuarioEmail}
+                onNavigate={onNavigate}
+                onLogout={onLogout}
+              />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
 
 
       <Route path="*" element={<Navigate to="/" />} />
