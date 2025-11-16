@@ -6,6 +6,8 @@ import HomePage from "./routes/Home";
 import TrilhasPage from "./routes/Trilhas";
 import BemEstarPage from "./routes/BemEstar";
 import PerfilPage from "./routes/Perfil";
+import Profissionais from "./routes/Profissionais";
+
 
 export default function App() {
   const [logado, setLogado] = useState(false);
@@ -125,6 +127,11 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
           )
         }
       />
+
+      
+      <Route path="/profissionais" 
+      element={<Profissionais />}/>
+
 
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

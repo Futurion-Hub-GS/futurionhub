@@ -1,4 +1,4 @@
-import { Home, Layers, Smile, User, LogOut } from "lucide-react";
+import { Home, Layers, Smile, User, LogOut, Users} from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 export default function Nav({
@@ -15,6 +15,8 @@ export default function Nav({
     { name: "Home", icon: <Home size={18} />, route: "home" },
     { name: "Trilhas", icon: <Layers size={18} />, route: "trilhas" },
     { name: "Bem-estar", icon: <Smile size={18} />, route: "bem-estar" },
+    {name: "Profissionais",icon:<Users size={18}/>, route: "profissionais"},
+
 
     // PERFIL COM EMAIL TRUNCADO + ÍCONE FIXO
     {
