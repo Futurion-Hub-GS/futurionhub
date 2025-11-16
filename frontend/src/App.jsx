@@ -8,6 +8,7 @@ import BemEstarPage from "./routes/BemEstar";
 import PerfilPage from "./routes/Perfil";
 import Profissionais from "./routes/Profissionais";
 
+import Footer from "./components/Footer"; // <-- IMPORTANTE
 
 export default function App() {
   const [logado, setLogado] = useState(false);
@@ -21,14 +22,26 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <RoutedPages
-        logado={logado}
-        setLogado={setLogado}
-        usuarioEmail={usuarioEmail}
-        setUsuarioEmail={setUsuarioEmail}
-        trilhas={trilhas}
-        setTrilhas={setTrilhas}
-      />
+
+      {/* Faz o app ocupar a tela toda para o footer ficar sempre no final */}
+      <div className="flex flex-col min-h-screen">
+
+        {/* Todas as páginas */}
+        <div className="flex-1">
+          <RoutedPages
+            logado={logado}
+            setLogado={setLogado}
+            usuarioEmail={usuarioEmail}
+            setUsuarioEmail={setUsuarioEmail}
+            trilhas={trilhas}
+            setTrilhas={setTrilhas}
+          />
+        </div>
+
+        {/* FOOTER FIXO NO FINAL */}
+        <Footer />
+
+      </div>
     </BrowserRouter>
   );
 }
@@ -118,7 +131,7 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
           logado ? (
             <PerfilPage
               trilhas={trilhas}
-              username={usuarioEmail}   // <-- AQUI ESTÁ A CORREÇÃO
+              username={usuarioEmail}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -128,22 +141,20 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
-      
       <Route
-          path="/profissionais"
-          element={
-            logado ? (
-              <Profissionais
-                username={usuarioEmail}
-                onNavigate={onNavigate}
-                onLogout={onLogout}
-              />
-            ) : (
-              <Navigate to="/" />
-            )
-          }
-        />
-
+        path="/profissionais"
+        element={
+          logado ? (
+            <Profissionais
+              username={usuarioEmail}
+              onNavigate={onNavigate}
+              onLogout={onLogout}
+            />
+          ) : (
+            <Navigate to="/" />
+          )
+        }
+      />
 
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

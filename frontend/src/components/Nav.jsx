@@ -31,8 +31,8 @@ export default function Nav({
   ];
 
   return (
-    <div className="flex h-screen">
-      <aside className="w-56 bg-blue-900 flex flex-col justify-between text-white">
+    <div className="flex min-h-screen">
+      <aside className="w-56 bg-blue-900 flex flex-col justify-between text-white min-h-screen">
         <div>
           <div className="flex items-center justify-center p-4 border-b border-blue-700">
             <img
