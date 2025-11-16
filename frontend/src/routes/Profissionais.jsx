@@ -79,6 +79,9 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
               <option>São Paulo</option>
               <option>Rio de Janeiro</option>
               <option>Belo Horizonte</option>
+              <option>Brasília</option>
+              <option>Curitiba</option>
+            
             </select>
           </div>
 
