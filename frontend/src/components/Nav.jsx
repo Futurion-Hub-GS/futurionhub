@@ -1,5 +1,6 @@
-import { Home, Layers, Smile, User, LogOut, Users} from "lucide-react";
+import { Home, Layers, Smile, User, LogOut, Users, Moon, Sun } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function Nav({
   title,
@@ -11,14 +12,32 @@ export default function Nav({
   const location = useLocation();
   const current = location.pathname.replace("/", "");
 
+  // --- DARK MODE ---
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
+
+  const toggleDarkMode = () => {
+    const newValue = !darkMode;
+    setDarkMode(newValue);
+    localStorage.setItem("darkMode", newValue);
+  };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  // --- MENU ---
   const menuItems = [
     { name: "Home", icon: <Home size={18} />, route: "home" },
     { name: "Trilhas", icon: <Layers size={18} />, route: "trilhas" },
     { name: "Bem-estar", icon: <Smile size={18} />, route: "bem-estar" },
-    {name: "Profissionais",icon:<Users size={18}/>, route: "profissionais"},
+    { name: "Profissionais", icon: <Users size={18} />, route: "profissionais" },
 
-
-    // PERFIL COM EMAIL TRUNCADO + ÍCONE FIXO
     {
       name: (
         <span className="truncate overflow-hidden text-ellipsis whitespace-nowrap max-w-[120px]">
@@ -31,10 +50,11 @@ export default function Nav({
   ];
 
   return (
-    <div className="flex min-h-screen">
-      <aside className="w-56 bg-blue-900 flex flex-col justify-between text-white min-h-screen">
+    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+      {/* SIDEBAR */}
+      <aside className="w-56 bg-blue-900 dark:bg-blue-950 flex flex-col justify-between text-white min-h-screen">
         <div>
-          <div className="flex items-center justify-center p-4 border-b border-blue-700">
+          <div className="flex items-center justify-center p-4 border-b border-blue-700 dark:border-blue-800">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png"
               alt="Logo"
@@ -49,8 +69,8 @@ export default function Nav({
                 onClick={() => onNavigate(item.route)}
                 className={`flex items-center gap-3 w-full px-5 py-2 text-sm font-medium transition-all ${
                   current === item.route
-                    ? "bg-white text-blue-900 rounded-l-full"
-                    : "hover:bg-blue-800"
+                    ? "bg-white text-blue-900 rounded-l-full dark:bg-gray-200"
+                    : "hover:bg-blue-800 dark:hover:bg-blue-900"
                 }`}
               >
                 {item.icon}
@@ -68,22 +88,36 @@ export default function Nav({
         </button>
       </aside>
 
+      {/* CONTEÚDO */}
       <div className="flex-1 flex flex-col">
-        <header className="bg-blue-900 text-white py-3 px-6 flex justify-between items-center">
-
+        {/* HEADER */}
+        <header className="bg-blue-900 dark:bg-blue-950 text-white py-3 px-6 flex justify-between items-center transition-colors">
           <h1 className="text-lg font-semibold">{title}</h1>
 
-          {/* EMAIL NO HEADER COM TRUNCATE */}
-          <div className="flex items-center gap-2 max-w-[180px]">
-            <User size={20} className="flex-shrink-0" />
+          {/* DARK MODE + EMAIL */}
+          <div className="flex items-center gap-4 max-w-[220px]">
 
-            <span className="truncate overflow-hidden text-ellipsis whitespace-nowrap text-sm">
-              {username}
-            </span>
+            {/* BOTÃO DARK MODE */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full hover:bg-blue-800 dark:hover:bg-blue-900 transition-colors"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            {/* EMAIL */}
+            <div className="flex items-center gap-2 max-w-[150px]">
+              <User size={20} className="flex-shrink-0" />
+
+              <span className="truncate overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+                {username}
+              </span>
+            </div>
           </div>
         </header>
 
-        <main className="flex-1 bg-gray-50 p-10 flex flex-col items-center">
+        {/* MAIN */}
+        <main className="flex-1 bg-gray-50 dark:bg-gray-900 p-10 flex flex-col items-center transition-colors">
           {children}
         </main>
       </div>
