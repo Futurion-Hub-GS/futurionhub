@@ -1,20 +1,38 @@
 import NavLayout from "../components/Nav";
 
-export default function PerfilPage({ trilhas, onNavigate, onLogout, username }) {
+// IMPORTAÇÃO DO RECHARTS
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
+export default function PerfilPage({ trilhas, onNavigate, onLogout, username }) {
   // -------------------------
   // 1. Dados do gráfico
   // -------------------------
-  const colaboradoresPorMes = [50, 70, 60, 40, 28];
+  const colaboradoresPorMes = [
+    { mes: "Jan", valor: 50 },
+    { mes: "Fev", valor: 70 },
+    { mes: "Mar", valor: 60 },
+    { mes: "Abr", valor: 40 },
+    { mes: "Mai", valor: 28 },
+  ];
 
-  const totalColaboradores = colaboradoresPorMes.reduce((a, b) => a + b, 0);
+  const totalColaboradores = colaboradoresPorMes.reduce(
+    (a, b) => a + b.valor,
+    0
+  );
 
   // -------------------------
   // 2. Trilhas
   // -------------------------
   const totalTrilhas = trilhas.length;
 
-  const trilhasCompletas = trilhas.filter(t => t.progresso === 100).length;
+  const trilhasCompletas = trilhas.filter((t) => t.progresso === 100).length;
 
   const taxaConclusao =
     totalTrilhas > 0
@@ -24,16 +42,14 @@ export default function PerfilPage({ trilhas, onNavigate, onLogout, username }) 
   return (
     <NavLayout
       title="Painel Corporativo"
-      username={username}          
+      username={username}
       active="Perfil"
       onNavigate={onNavigate}
       onLogout={onLogout}
     >
       <div className="w-full max-w-6xl flex flex-col gap-6">
-
         {/* ----------- CARDS SUPERIORES ----------- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
           <div className="bg-white shadow rounded-xl p-6">
             <h3 className="text-sm text-gray-500 mb-1">Colaboradores Ativos</h3>
             <p className="text-3xl font-bold text-gray-800">{totalColaboradores}</p>
@@ -48,27 +64,29 @@ export default function PerfilPage({ trilhas, onNavigate, onLogout, username }) 
             <h3 className="text-sm text-gray-500 mb-1">Taxa de Conclusão</h3>
             <p className="text-3xl font-bold text-gray-800">{taxaConclusao}%</p>
           </div>
-
         </div>
 
-        <div className="bg-white shadow rounded-xl p-6 min-h-[280px]">
+        {/* ----------- GRÁFICO ----------- */}
+        <div className="bg-white shadow rounded-xl p-6 min-h-[350px]">
           <h3 className="text-lg font-semibold text-gray-700 mb-6">
             Colaboradores Ativos por Mês
           </h3>
 
-          <div className="w-full h-[450px] flex items-end justify-between px-6 text-gray-400">
-            <span>Jan</span>
-            <span>Feb</span>
-            <span>Mar</span>
-            <span>Apr</span>
-            <span>May</span>
+          <div className="w-full h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={colaboradoresPorMes}>
+                <XAxis dataKey="mes" stroke="#555" />
+                <YAxis stroke="#555" />
+                <Tooltip />
+                <Bar dataKey="valor" fill="#1E40AF" /> {/* azul tailwind */}
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
 
         <button className="bg-blue-900 text-white font-semibold py-3 rounded-lg hover:bg-blue-800 transition-all">
           Gerar Relatório
         </button>
-
       </div>
     </NavLayout>
   );
