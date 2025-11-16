@@ -1,6 +1,7 @@
 import { Home, Layers, Smile, User, LogOut, Users, Moon, Sun } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import futurionHub from "../assets/futurionhub_logo.png";
 
 export default function Nav({
   title,
@@ -56,9 +57,9 @@ export default function Nav({
         <div>
           <div className="flex items-center justify-center p-4 border-b border-blue-700 dark:border-blue-800">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png"
+              src={futurionHub}
               alt="Logo"
-              className="h-8"
+              className="h-16 flex"
             />
           </div>
 

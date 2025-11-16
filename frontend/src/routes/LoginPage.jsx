@@ -1,4 +1,5 @@
 import { useState } from "react";
+import futurionHub from "../assets/futurionhub_logo.png";
 
 export default function LoginPage({ onLoginSuccess }) {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ export default function LoginPage({ onLoginSuccess }) {
       <div className="bg-white shadow-md rounded-2xl p-8 w-[360px] text-center">
         <div className="flex justify-center mb-4">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png"
+            src={futurionHub}
             alt="Logo Futurion Hub"
             className="h-12 w-12 object-contain"
           />
