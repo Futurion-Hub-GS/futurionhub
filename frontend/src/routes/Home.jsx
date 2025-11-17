@@ -62,6 +62,12 @@ export default function HomePage({ trilhas, onNavigate, onLogout, username }) {
         >
           Painel
         </button>
+        <button
+          onClick={() => onNavigate("Profissionais")}
+          className="bg-blue-900 text-white px-8 py-4 rounded-xl shadow hover:bg-blue-800 transition-all"
+        >
+          Profissionais
+        </button>
       </div>
     </NavLayout>
   );
