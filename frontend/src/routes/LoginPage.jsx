@@ -6,14 +6,28 @@ export default function LoginPage({ onLoginSuccess }) {
   const [senha, setSenha] = useState("");
   const [showReset, setShowReset] = useState(false);
   const [resetEmail, setResetEmail] = useState("");
+  const [erro, setErro] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (email && senha) {
-      onLoginSuccess(email);
-    } else {
-      alert("Preencha todos os campos!");
+    try {
+      const response = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha }),
+      });
+
+      if (!response.ok) {
+        setErro("Email ou senha incorretos.");
+        return;
+      }
+
+      const user = await response.json();
+      onLoginSuccess(user);
+    } catch (error) {
+      console.error(error);
+      setErro("Erro ao conectar ao servidor.");
     }
   };
 
@@ -26,6 +40,7 @@ export default function LoginPage({ onLoginSuccess }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
       <div className="bg-white shadow-md rounded-2xl p-8 w-[360px] text-center">
+
         <div className="flex justify-center mb-4">
           <img
             src={futurionHub}
@@ -61,6 +76,10 @@ export default function LoginPage({ onLoginSuccess }) {
               className="w-full mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
+          {erro && (
+            <p className="text-red-600 text-sm text-center">{erro}</p>
+          )}
 
           <button
             type="submit"

@@ -8,11 +8,10 @@ import BemEstarPage from "./routes/BemEstar";
 import PerfilPage from "./routes/Perfil";
 import Profissionais from "./routes/Profissionais";
 
-import Footer from "./components/Footer"; // <-- IMPORTANTE
+import Footer from "./components/Footer";
 
 export default function App() {
-  const [logado, setLogado] = useState(false);
-  const [usuarioEmail, setUsuarioEmail] = useState("");
+  const [usuario, setUsuario] = useState(null); // <-- AGORA É O USUÁRIO COMPLETO
 
   const [trilhas, setTrilhas] = useState([
     { nome: "React Avançado", progresso: 75 },
@@ -22,31 +21,27 @@ export default function App() {
 
   return (
     <BrowserRouter>
-
-      {/* Faz o app ocupar a tela toda para o footer ficar sempre no final */}
       <div className="flex flex-col min-h-screen">
 
-        {/* Todas as páginas */}
         <div className="flex-1">
           <RoutedPages
-            logado={logado}
-            setLogado={setLogado}
-            usuarioEmail={usuarioEmail}
-            setUsuarioEmail={setUsuarioEmail}
+            usuario={usuario}
+            setUsuario={setUsuario}
             trilhas={trilhas}
             setTrilhas={setTrilhas}
           />
         </div>
 
-        {/* FOOTER FIXO NO FINAL */}
         <Footer />
-
       </div>
     </BrowserRouter>
   );
 }
 
-function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas, setTrilhas }) {
+/* ------------------------------
+    TODAS AS ROTAS DO SISTEMA
+-------------------------------- */
+function RoutedPages({ usuario, setUsuario, trilhas, setTrilhas }) {
   const navigate = useNavigate();
 
   const onNavigate = (nome) => {
@@ -55,35 +50,33 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
   };
 
   const onLogout = () => {
-    setLogado(false);
+    setUsuario(null);
     navigate("/");
   };
 
   return (
     <Routes>
+
+      {/* LOGIN */}
       <Route
         path="/"
         element={
-          logado ? (
+          usuario ? (
             <Navigate to="/home" />
           ) : (
-            <LoginPage
-              onLoginSuccess={(email) => {
-                setUsuarioEmail(email);
-                setLogado(true);
-              }}
-            />
+            <LoginPage onLoginSuccess={(user) => setUsuario(user)} />
           )
         }
       />
 
+      {/* HOME */}
       <Route
         path="/home"
         element={
-          logado ? (
+          usuario ? (
             <HomePage
               trilhas={trilhas}
-              username={usuarioEmail}
+              username={usuario.nome}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -93,14 +86,15 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
+      {/* TRILHAS */}
       <Route
         path="/trilhas"
         element={
-          logado ? (
+          usuario ? (
             <TrilhasPage
               trilhas={trilhas}
               setTrilhas={setTrilhas}
-              username={usuarioEmail}
+              username={usuario.nome}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -110,12 +104,13 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
+      {/* BEM ESTAR */}
       <Route
         path="/bem-estar"
         element={
-          logado ? (
+          usuario ? (
             <BemEstarPage
-              username={usuarioEmail}
+              username={usuario.nome}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -125,13 +120,14 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
+      {/* PERFIL */}
       <Route
         path="/perfil"
         element={
-          logado ? (
+          usuario ? (
             <PerfilPage
               trilhas={trilhas}
-              username={usuarioEmail}
+              username={usuario.nome}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -141,12 +137,13 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
+      {/* PROFISSIONAIS */}
       <Route
         path="/profissionais"
         element={
-          logado ? (
+          usuario ? (
             <Profissionais
-              username={usuarioEmail}
+              username={usuario.nome}
               onNavigate={onNavigate}
               onLogout={onLogout}
             />
@@ -156,6 +153,7 @@ function RoutedPages({ logado, setLogado, usuarioEmail, setUsuarioEmail, trilhas
         }
       />
 
+      {/* ROTA PADRÃO */}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
