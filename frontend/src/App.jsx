@@ -7,11 +7,12 @@ import TrilhasPage from "./routes/Trilhas";
 import BemEstarPage from "./routes/BemEstar";
 import PerfilPage from "./routes/Perfil";
 import Profissionais from "./routes/Profissionais";
+import Error from "./routes/Error"
 
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [usuario, setUsuario] = useState(null); // <-- AGORA É O USUÁRIO COMPLETO
+  const [usuario, setUsuario] = useState(null); // USUÁRIO COMPLETO
 
   const [trilhas, setTrilhas] = useState([
     { nome: "React Avançado", progresso: 75 },
@@ -38,9 +39,9 @@ export default function App() {
   );
 }
 
-/* ------------------------------
-    TODAS AS ROTAS DO SISTEMA
--------------------------------- */
+
+    // ROTAS DO SISTEMA
+
 function RoutedPages({ usuario, setUsuario, trilhas, setTrilhas }) {
   const navigate = useNavigate();
 
@@ -154,7 +155,8 @@ function RoutedPages({ usuario, setUsuario, trilhas, setTrilhas }) {
       />
 
       {/* ROTA PADRÃO */}
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<Error />} />
+
     </Routes>
   );
 }
