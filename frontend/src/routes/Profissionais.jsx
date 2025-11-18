@@ -62,8 +62,9 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
               onChange={(e) => setFiltroArea(e.target.value)}
             >
               <option>Todos</option>
-              <option>Engenharia</option>
+              <option>Tecnologia</option>
               <option>Design</option>
+              <option>Gestão</option>
               <option>Backend</option>
             </select>
           </div>
@@ -76,11 +77,13 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
               onChange={(e) => setFiltroLocal(e.target.value)}
             >
               <option>Todos</option>
-              <option>São Paulo</option>
-              <option>Rio de Janeiro</option>
-              <option>Belo Horizonte</option>
-              <option>Brasília</option>
-              <option>Curitiba</option>
+              <option>São Paulo, SP</option>
+              <option>Rio de Janeiro, RJ</option>
+              <option>Belo Horizonte, MG</option>
+              <option>Salvador, BA</option>
+              <option>Curitiba, PR</option>
+              <option>Porto Alegre, RS</option>
+              <option>Brasília, DF</option>
             
             </select>
           </div>
@@ -93,9 +96,24 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
               onChange={(e) => setFiltroTec(e.target.value)}
             >
               <option>Todos</option>
-              <option>Full Stack</option>
-              <option>UX/UI</option>
-              <option>Backend</option>
+              <option>React</option>
+              <option>Node.js</option>
+              <option>PostgreSQL</option>
+              <option>Docker</option>
+              <option>AWS</option>
+              <option>GraphQL</option>
+              <option>UI/UX Design</option>
+              <option>Figma</option>
+              <option>Adobe XD</option>
+              <option>Python</option>
+              <option>Machine Learning</option>
+              <option>TensorFlow</option>
+              <option>Gestão de Projetos</option>
+              <option>Scrum</option>
+              <option>Kanban</option>
+              <option>JavaScript</option>
+              <option>HTML</option>
+              <option>CSS</option>
             </select>
           </div>
         </div>
