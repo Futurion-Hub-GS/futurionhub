@@ -145,7 +145,7 @@ Na pasta raiz:
 
 
 Aplicação rodando em:
-👉 http://localhost:3000
+👉 http://localhost:5173
 
 
 # 🧩 Propriedades do JSON (Conforme o briefing da faculdade)
