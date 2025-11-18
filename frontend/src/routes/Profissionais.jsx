@@ -128,76 +128,99 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
         </div>
 
         {/* MODAL */}
-        {selecionado && (
-          <div
-            className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-[100]"
-            onClick={() => setSelecionado(null)}
-          >
-            <div
-              className="bg-white p-8 rounded-2xl shadow-xl w-[90%] max-w-2xl relative animate-fadeIn"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={selecionado.photo}
-                className="w-40 h-40 rounded-xl object-cover mx-auto"
-              />
+    {selecionado && (
+      <div
+        className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-[100]"
+        onClick={() => setSelecionado(null)}
+      >
+        <div
+          className="bg-white p-8 rounded-2xl shadow-xl w-[90%] max-w-2xl relative animate-fadeIn"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img
+            src={selecionado.photo}
+            className="w-40 h-40 rounded-xl object-cover mx-auto"
+          />
 
-              <h2 className="text-3xl font-bold text-center mt-4">
-                {selecionado.name}
-              </h2>
+          <h2 className="text-3xl font-bold text-center mt-4">
+            {selecionado.name}
+          </h2>
 
-              <p className="text-blue-700 text-lg font-medium text-center">
-                {selecionado.title}
-              </p>
+          <p className="text-blue-700 text-lg font-medium text-center">
+            {selecionado.title}
+          </p>
 
-              <p className="text-gray-600 text-center mt-1">
-                {selecionado.location}
-              </p>
+          <p className="text-gray-600 text-center mt-1">
+            {selecionado.location}
+          </p>
 
-              <p className="text-gray-700 text-center mt-4 px-4">
-                {selecionado.bio}
-              </p>
+          <p className="text-gray-700 text-center mt-4 px-4">
+            {selecionado.bio}
+          </p>
 
-              <div className="flex flex-wrap justify-center gap-2 mt-6">
-                {selecionado.skills?.map((s, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex justify-center gap-4 mt-8">
-                <button
-                  className="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition"
-                  onClick={() => alert("Mensagem enviada! ✔")}
-                >
-                  Enviar Mensagem
-                </button>
-
-                <button
-                  className={`px-6 py-3 rounded-xl transition ${
-                    recomendado
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-800"
-                  }`}
-                  onClick={() => setRecomendado(!recomendado)}
-                >
-                  {recomendado ? "Recomendado ✔" : "Recomendar"}
-                </button>
-              </div>
-
-              <button
-                onClick={() => setSelecionado(null)}
-                className="absolute top-3 right-3 text-2xl text-gray-500 hover:text-gray-700"
+          {/* --- SKILLS TÉCNICAS --- */}
+          <h3 className="text-xl font-semibold mt-8">Habilidades Técnicas</h3>
+          <div className="flex flex-wrap justify-center gap-2 mt-3">
+            {selecionado.technicalSkills?.map((s, i) => (
+              <span
+                key={i}
+                className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
               >
-                ✕
-              </button>
-            </div>
+                {s}
+              </span>
+            ))}
           </div>
-        )}
+
+          {/* --- SOFT SKILLS --- */}
+          <h3 className="text-xl font-semibold mt-8">Soft Skills</h3>
+          <div className="flex flex-wrap justify-center gap-2 mt-3">
+            {selecionado.softSkills?.map((s, i) => (
+              <span
+                key={i}
+                className="px-3 py-1 bg-blue-100 text-blue-900 rounded-full text-sm"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
+          {/* --- HOBBIES --- */}
+          <h3 className="text-xl font-semibold mt-8">Hobbies</h3>
+          <p className="text-gray-700 text-center mt-2 px-4">
+            {selecionado.hobbies}
+          </p>
+
+          {/* BOTÕES */}
+          <div className="flex justify-center gap-4 mt-8">
+            <button
+              className="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition"
+              onClick={() => alert("Mensagem enviada! ✔")}
+            >
+              Enviar Mensagem
+            </button>
+
+            <button
+              className={`px-6 py-3 rounded-xl transition ${
+                recomendado
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-200 text-gray-800"
+              }`}
+              onClick={() => setRecomendado(!recomendado)}
+            >
+              {recomendado ? "Recomendado ✔" : "Recomendar"}
+            </button>
+          </div>
+
+          <button
+            onClick={() => setSelecionado(null)}
+            className="absolute top-3 right-3 text-2xl text-gray-500 hover:text-gray-700"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    )}
+
       </div>
     </NavLayout>
   );
