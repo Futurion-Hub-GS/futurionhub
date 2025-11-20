@@ -117,8 +117,8 @@ O login é verificado no backend.
 
 # 🚀 Instalação e Execução do Projeto
 📌 1. Clonar o Repositório
-git clone https://github.com/SEU-USUARIO/futurion-hub.git
-cd futurion-hub
+git clone https://github.com/Futurion-Hub-GS/futurionhub.git
+cd futurionhub
 
 🖥️ 2. Instalar Dependências (na pasta raiz)
 npm install
