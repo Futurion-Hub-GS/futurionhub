@@ -120,7 +120,7 @@ O login é verificado no backend.
 git clone https://github.com/SEU-USUARIO/futurion-hub.git
 cd futurion-hub
 
-🖥️ 2. Instalar Dependências (Front-End)
+🖥️ 2. Instalar Dependências (na pasta raiz)
 npm install
 
 🌐 3. Rodar o Servidor Backend
