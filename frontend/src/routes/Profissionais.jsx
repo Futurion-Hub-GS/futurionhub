@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import NavLayout from "../components/Nav"; // ← usa o mesmo layout das outras páginas
+import NavLayout from "../components/Nav"; 
 
 export default function Profissionais({ username, onNavigate, onLogout }) {
   const [lista, setLista] = useState([]);
@@ -47,17 +47,17 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
         <input
           type="text"
           placeholder="Buscar por nome, cargo, skill..."
-          className="w-full border rounded-xl px-4 py-3 shadow-sm"
+          className="w-full border rounded-xl px-4 py-3 shadow-sm bg-white"
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
         />
 
         {/* Filtros */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 ">
           <div>
-            <label className="text-sm font-semibold">Área</label>
+            <label className="text-sm font-semibold text-gray-400">Área</label>
             <select
-              className="w-full border rounded-xl px-3 py-2"
+              className="w-full border rounded-xl px-3 py-2 bg-white"
               value={filtroArea}
               onChange={(e) => setFiltroArea(e.target.value)}
             >
@@ -70,9 +70,9 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
           </div>
 
           <div>
-            <label className="text-sm font-semibold">Localidade</label>
+            <label className="text-sm font-semibold text-gray-400">Localidade</label>
             <select
-              className="w-full border rounded-xl px-3 py-2"
+              className="w-full border rounded-xl px-3 py-2 bg-white"
               value={filtroLocal}
               onChange={(e) => setFiltroLocal(e.target.value)}
             >
@@ -89,9 +89,9 @@ export default function Profissionais({ username, onNavigate, onLogout }) {
           </div>
 
           <div>
-            <label className="text-sm font-semibold">Tecnologia</label>
+            <label className="text-sm font-semibold text-gray-400">Tecnologia</label>
             <select
-              className="w-full border rounded-xl px-3 py-2"
+              className="w-full border rounded-xl px-3 py-2 bg-white"
               value={filtroTec}
               onChange={(e) => setFiltroTec(e.target.value)}
             >
